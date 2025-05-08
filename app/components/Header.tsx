@@ -4,8 +4,8 @@ import Link from 'next/link';
 
 export default function Header() {
   return (
-    <header className="w-full bg-white shadow p-4 flex items-center justify-between">
-      <div className="flex items-center gap-2">
+    <header className="w-full bg-[#f7f7f7] shadow flex items-center justify-between">
+      <div className="flex items-center gap-2 left-10">
         <Link href="/" className="">
           <Image
             src="/images/logo.png"
