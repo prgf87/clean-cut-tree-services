@@ -27,7 +27,7 @@ export default function ContactForm() {
         </div>
         <h3 className="text-xl font-bold">Thank You!</h3>
         <p className="mt-2 text-gray-600">
-          Your message has been received. We'll get back to you shortly.
+          Your message has been received. We&apos;ll get back to you shortly.
         </p>
         <button
           className="bg-[#0e7f31] transition duration-300 border hover:border-green-700 text-white px-10 py-3 rounded-md hover:shadow-lg hover:bg-white hover:text-[#0e7f31]"

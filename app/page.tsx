@@ -251,10 +251,10 @@ export default function Home() {
                 on safety, efficiency, and environmental responsibility.
               </p>
               <p className="text-gray-600">
-                We take pride in our work and strive to exceed our customers'
-                expectations on every project. From routine pruning to complex
-                tree removals, we have the knowledge, skills, and equipment to
-                handle any tree care challenge.
+                We take pride in our work and strive to exceed our
+                customers&apos; expectations on every project. From routine
+                pruning to complex tree removals, we have the knowledge, skills,
+                and equipment to handle any tree care challenge.
               </p>
               <div className="flex flex-col gap-2 pt-4 min-[400px]:flex-row">
                 <Link href={'/#certifications'}>
@@ -281,8 +281,8 @@ export default function Home() {
                 What Our Clients Say
               </h2>
               <p className="max-w-[700px] text-gray-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Don't just take our word for it. Here's what our satisfied
-                customers have to say.
+                Don&apos;t just take our word for it. Here&apos;s what our
+                satisfied customers have to say.
               </p>
             </div>
           </div>
@@ -326,7 +326,7 @@ export default function Home() {
               <p className="mt-2 text-gray-600">
                 I had a tree emergency after a storm, and Clean Cut was there
                 within hours. They handled the situation with care and
-                professionalism. I can't thank them enough for their quick
+                professionalism. I can&apos;t thank them enough for their quick
                 response and excellent service.
               </p>
             </div>
@@ -436,7 +436,7 @@ export default function Home() {
               </h2>
               <p className="text-gray-600">
                 Have questions or ready to schedule a service? Fill out the form
-                and we'll get back to you as soon as possible.
+                and we&apos;ll get back to you as soon as possible.
               </p>
               <div className="space-y-4 pt-4">
                 <div className="flex items-start space-x-4">
