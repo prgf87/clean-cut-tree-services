@@ -2,7 +2,8 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Clean Cut Tree - Services in and around Kent',
+  title:
+    'Clean Cut Tree Services | Professional Tree Surgery in Canterbury, Kent',
   description:
     'Clean Cut Tree is a tree surgery company based in Kent, providing professional tree care and maintenance services. We specialize in tree felling, pruning, and stump removal, ensuring the health and safety of your trees. Our experienced team is dedicated to delivering high-quality service with a focus on customer satisfaction.',
   keywords: [
@@ -494,6 +495,77 @@ export const metadata: Metadata = {
     'woodland management Canterbury',
     'forestry services Canterbury',
   ],
+  alternates: {
+    canonical: 'https://cleancuttree.co.uk',
+  },
+  openGraph: {
+    title: 'Clean Cut Tree Services | Canterbury, Kent',
+    description:
+      'Professional tree surgery services in Kent. Emergency tree removal, pruning, and stump grinding. Call for a free survey!',
+    url: 'https://cleancuttree.co.uk',
+    siteName: 'Clean Cut Tree Services',
+    images: [
+      {
+        url: 'https://cleancuttree.co.uk/images/img1.jpg', // High-res preview image
+        width: 1200,
+        height: 630,
+        alt: 'Clean Cut Tree team working on tree removal',
+      },
+    ],
+    locale: 'en_UK',
+    type: 'website',
+  },
+
+  // Mobile/UX Optimization
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 1,
+  },
+  themeColor: '#3a7d44', // Brand green (for mobile browsers)
+
+  // Business-specific metadata
+  category: 'tree services', // Helps search engines classify
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      noimageindex: false,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+
+  // Local Business SEO (critical for "near me" searches)
+  metadataBase: new URL('https://cleancuttree.co.uk'),
+  authors: [{ name: 'Clean Cut Tree', url: 'https://cleancuttree.co.uk' }],
+  publisher: 'Clean Cut Tree',
+  creator: 'Clean Cut Tree',
+  formatDetection: {
+    email: true,
+    address: true,
+    telephone: true,
+  },
+
+  // Apple/Safari specific
+  appleWebApp: {
+    capable: true,
+    title: 'Clean Cut Tree Services',
+    statusBarStyle: 'black-translucent',
+  },
+
+  // Icons & Favicons (for browser tabs/bookmarks)
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+  },
+
+  // Manifest (for PWA)
+  manifest: '/site.webmanifest',
 };
 
 export default function RootLayout({

@@ -12,17 +12,16 @@ export default function ContactForm() {
     setIsSubmitting(true);
 
     // Simulate form submission
-    // await new Promise((resolve) => setTimeout(resolve, 1500))
+    await new Promise((resolve) => setTimeout(resolve, 1500));
 
-    // setIsSubmitting(false)
-    // setIsSubmitted(true)
+    setIsSubmitting(false);
+    setIsSubmitted(true);
   };
 
   if (isSubmitted) {
     return (
       <div className="flex flex-col items-center justify-center py-12 text-center">
         <div className="mb-4 rounded-full bg-green-100 p-3">
-          {' '}
           <BsFillCheckCircleFill className="h-5 w-5 text-[#0e7f31]" />
         </div>
         <h3 className="text-xl font-bold">Thank You!</h3>
