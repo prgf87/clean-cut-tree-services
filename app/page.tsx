@@ -1,7 +1,6 @@
 import ContactForm from '@/components/ContactForm';
 import Image from 'next/image';
 import Link from 'next/link';
-import { BsFillCheckCircleFill } from 'react-icons/bs';
 import { FaStethoscope, FaTree } from 'react-icons/fa';
 import { FaMinimize } from 'react-icons/fa6';
 import { FiAlertTriangle, FiScissors } from 'react-icons/fi';

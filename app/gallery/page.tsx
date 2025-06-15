@@ -275,9 +275,9 @@ export default function GalleryPage() {
                 <IoIosStar size={24} color="green" />
               </div>
               <p className="text-gray-600 mb-4">
-                "Excellent service! They removed a huge oak tree from our
+                &quot;Excellent service! They removed a huge oak tree from our
                 backyard safely and cleaned up everything perfectly. Highly
-                recommend!"
+                recommend!&quot;
               </p>
               <div className="font-semibold text-zinc-500">
                 - Sarah Thompson
@@ -294,8 +294,8 @@ export default function GalleryPage() {
                 <IoIosStar size={24} color="green" />
               </div>
               <p className="text-gray-600 mb-4">
-                "Professional, punctual, and reasonably priced. They trimmed all
-                our trees and the property looks amazing now."
+                &quot;Professional, punctual, and reasonably priced. They
+                trimmed all our trees and the property looks amazing now.&quot;
               </p>
               <div className="font-semibold text-zinc-500">- Mike Roberts</div>
               <div className="text-sm text-zinc-500">Canterbury, Kent</div>
@@ -310,8 +310,8 @@ export default function GalleryPage() {
                 <IoIosStar size={24} color="green" />
               </div>
               <p className="text-gray-600 mb-4">
-                "Called them for emergency storm cleanup. They responded quickly
-                and handled everything professionally. Great team!"
+                &quot;Called them for emergency storm cleanup. They responded
+                quickly and handled everything professionally. Great team!&quot;
               </p>
               <div className="font-semibold text-zinc-500">
                 - Jennifer Lewis

@@ -545,8 +545,8 @@ export default function QuotePage() {
                 <IoIosStar size={24} color="green" />
               </div>
               <p className="text-gray-600 mb-4">
-                "The quote was detailed and fair. They explained everything
-                clearly and completed the work exactly as promised."
+                &quot;The quote was detailed and fair. They explained everything
+                clearly and completed the work exactly as promised.&quot;
               </p>
               <div className="font-semibold text-zinc-500">- David Wilson</div>
               <div className="text-sm text-zinc-500">Dover, Kent</div>
@@ -561,8 +561,8 @@ export default function QuotePage() {
                 <IoIosStar size={24} color="green" />
               </div>
               <p className="text-gray-600 mb-4">
-                "Fast response to my quote request. They came out the same day
-                and provided a comprehensive estimate."
+                &quot;Fast response to my quote request. They came out the same
+                day and provided a comprehensive estimate.&quot;
               </p>
               <div className="font-semibold text-zinc-500">- Lisa Thompson</div>
               <div className="text-sm text-zinc-500">Canterbury, Kent</div>
@@ -577,8 +577,8 @@ export default function QuotePage() {
                 <IoIosStar size={24} color="green" />
               </div>
               <p className="text-gray-600 mb-4">
-                "No surprises, no hidden fees. The final cost matched the quote
-                exactly. Very professional service."
+                &quot;No surprises, no hidden fees. The final cost matched the
+                quote exactly. Very professional service.&quot;
               </p>
               <div className="font-semibold text-zinc-500">
                 - Robert Harrison
