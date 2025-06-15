@@ -182,7 +182,7 @@ export default function ContactPage() {
                     <option value="this-week">This week</option>
                     <option value="this-month">This month</option>
                     <option value="next-month">Next month</option>
-                    <option value="flexible">I'm flexible</option>
+                    <option value="flexible">I&apos;m flexible</option>
                   </select>
                 </div>
 
@@ -361,7 +361,7 @@ export default function ContactPage() {
 
           <div className="text-center mt-8">
             <p className="text-gray-600">
-              Don't see your area listed?{' '}
+              Don&apos;t see your area listed?{' '}
               <span className="text-green-600 font-medium">Call us</span> - we
               may still be able to help!
             </p>

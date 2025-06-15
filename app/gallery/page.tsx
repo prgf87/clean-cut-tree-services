@@ -203,7 +203,7 @@ export default function GalleryPage() {
                   Hazardous Tree Removal
                 </h3>
                 <p className="text-gray-600">
-                  Removed dangerous leaning tree that threatened the home's
+                  Removed dangerous leaning tree that threatened the home&apos;s
                   foundation and safety.
                 </p>
               </div>
@@ -260,7 +260,8 @@ export default function GalleryPage() {
               What Our Customers Say
             </h2>
             <p className="text-xl text-gray-600">
-              Don't just take our word for it - hear from satisfied customers.
+              Don&apos;t just take our word for it - hear from satisfied
+              customers.
             </p>
           </div>
 

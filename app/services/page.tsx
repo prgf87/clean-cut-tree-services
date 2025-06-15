@@ -228,7 +228,7 @@ export default function ServicesPage() {
                 24/7 Emergency Tree Services
               </h2>
               <p className="text-xl text-gray-600 mb-8">
-                When storms strike or trees become hazardous, we're here to
+                When storms strike or trees become hazardous, we&apos;re here to
                 help. Our emergency response team is available around the clock
                 to handle dangerous situations quickly and safely.
               </p>
@@ -309,7 +309,7 @@ export default function ServicesPage() {
 
           <div className="text-center mt-8">
             <p className="text-gray-600">
-              Don't see your area listed?{' '}
+              Don&apos;t see your area listed?{' '}
               <span className="text-green-600 font-medium">Call us</span> - we
               may still be able to help!
             </p>
@@ -325,8 +325,8 @@ export default function ServicesPage() {
               Why Choose Clean Cut Tree Services?
             </h2>
             <p className="text-xl text-gray-600">
-              We're committed to providing the highest quality tree care with
-              safety and professionalism.
+              We&apos;re committed to providing the highest quality tree care
+              with safety and professionalism.
             </p>
           </div>
 
@@ -337,8 +337,8 @@ export default function ServicesPage() {
               </div>
               <h3 className="text-xl font-semibold mb-2">Fully Insured</h3>
               <p className="text-gray-600">
-                Complete liability and workers' compensation insurance for your
-                peace of mind.
+                Complete liability and workers&apos; compensation insurance for
+                your peace of mind.
               </p>
             </div>
 

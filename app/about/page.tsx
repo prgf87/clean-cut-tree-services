@@ -75,7 +75,7 @@ export default function AboutPage() {
               Why Choose Clean Cut Tree Services?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We're committed to providing the highest quality tree care
+              We&apos;re committed to providing the highest quality tree care
               services with safety, professionalism, and customer satisfaction
               as our top priorities.
             </p>
@@ -109,8 +109,8 @@ export default function AboutPage() {
               </div>
               <h3 className="text-xl font-semibold mb-2">Fully Insured</h3>
               <p className="text-gray-600">
-                Complete liability and workers' compensation insurance for your
-                peace of mind.
+                Complete liability and workers&apos; compensation insurance for
+                your peace of mind.
               </p>
             </div>
 

@@ -297,7 +297,7 @@ export default function QuotePage() {
                           <option value="this-week">This week</option>
                           <option value="this-month">This month</option>
                           <option value="next-month">Next month</option>
-                          <option value="flexible">I'm flexible</option>
+                          <option value="flexible">I&apos;m flexible</option>
                         </select>
                       </div>
                       <div>
