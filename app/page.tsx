@@ -422,7 +422,7 @@ export default function Home() {
                   </div>
                   <div>
                     <h3 className="font-bold">Email</h3>
-                    <p className="text-gray-600">info@cleancuttree.com</p>
+                    <p className="text-gray-600">info@cleancuttree.co.uk</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">

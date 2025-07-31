@@ -226,7 +226,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="font-semibold">Email</h3>
-                      <p className="text-gray-600">info@cleancuttree.com</p>
+                      <p className="text-gray-600">info@cleancuttree.co.uk</p>
                       <p className="text-sm text-gray-500">
                         We respond within 24 hours
                       </p>
@@ -362,8 +362,12 @@ export default function ContactPage() {
           <div className="text-center mt-8">
             <p className="text-gray-600">
               Don&apos;t see your area listed?{' '}
-              <span className="text-green-600 font-medium">Call us</span> - we
-              may still be able to help!
+              <a href="tel:07809476910">
+                <span className="text-green-600 font-medium underline hover:text-green-500 cursor-pointer">
+                  Call us
+                </span>{' '}
+              </a>
+              - we may still be able to help!
             </p>
           </div>
         </div>

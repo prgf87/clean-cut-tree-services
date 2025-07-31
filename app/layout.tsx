@@ -3,6 +3,7 @@ import './globals.css';
 import Image from 'next/image';
 import Link from 'next/link';
 import { BsFillCheckCircleFill } from 'react-icons/bs';
+import { FaPhone } from 'react-icons/fa';
 
 export const metadata: Metadata = {
   title:
@@ -581,7 +582,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <section className="relative bg-gradient-to-b from-green-50 to-white py-10 lg:py-20">
+        <header className="relative bg-gradient-to-b from-green-50 to-white py-10 lg:py-20">
           <div className="container mx-auto px-4 md:px-6">
             <div className="grid items-center gap-6 lg:grid-cols-2 lg:gap-12">
               <div className="flex flex-col justify-center space-y-4">
@@ -602,7 +603,7 @@ export default function RootLayout({
                       Talk to an Expert
                     </button>
                   </Link>
-                  <Link href={'/#services'}>
+                  <Link href={'/services'}>
                     <button className="bg-white transition duration-300 border hover:border-white text-[#0e7f31] px-10 py-3 rounded-md hover:shadow-lg hover:bg-[#0e7f31] hover:text-white">
                       Our Services
                     </button>
@@ -624,25 +625,27 @@ export default function RootLayout({
                 </div>
               </div>
               <div className="flex items-center justify-center">
-                <div className="relative h-[300px] w-[300px] overflow-hidden rounded-full md:h-[450px] md:w-[450px]">
-                  <Image
-                    src="/logo-white.png"
-                    alt="Clean Cut Tree Services"
-                    fill
-                    className="object-contain"
-                    priority
-                  />
-                </div>
+                <button className="relative h-[300px] w-[300px] overflow-hidden rounded-full md:h-[450px] md:w-[450px]">
+                  <Link href="/">
+                    <Image
+                      src="/logo-white.png"
+                      alt="Clean Cut Tree Services"
+                      fill
+                      className="object-contain"
+                      priority
+                    />
+                  </Link>
+                </button>
               </div>
             </div>
           </div>
-        </section>
+        </header>
         {children}
         <footer className="bg-gray-900 py-12 text-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
               <div className="space-y-4">
-                <div className="relative h-16 w-48">
+                <div className="relative -left-16 top-0 h-16 w-48">
                   <Image
                     src="/logo-white.png"
                     alt="Clean Cut Tree Services"
@@ -650,53 +653,61 @@ export default function RootLayout({
                     className="object-contain"
                   />
                 </div>
-                <p className="text-gray-400 lg:pr-28">
+                <p className="text-gray-400 pr-20">
                   Professional tree care services for residential and commercial
                   properties.
                 </p>
               </div>
               <div>
-                <h3 className="mb-4 text-lg font-bold">Quick Links</h3>
+                <h3 className="mb-4 text-lg font-bold">Site Links</h3>
                 <ul className="space-y-2">
                   <li>
-                    <a
-                      href="#"
+                    <Link
+                      href="/#"
                       className="text-gray-400 transition-colors hover:text-white"
                     >
                       Home
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
-                      href="#services"
+                    <Link
+                      href="/services"
                       className="text-gray-400 transition-colors hover:text-white"
                     >
                       Services
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
-                      href="#about"
+                    <Link
+                      href="/about"
                       className="text-gray-400 transition-colors hover:text-white"
                     >
                       About Us
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
-                      href="#testimonials"
+                    <Link
+                      href="/gallery"
                       className="text-gray-400 transition-colors hover:text-white"
                     >
-                      Testimonials
-                    </a>
+                      Gallery
+                    </Link>
                   </li>
                   <li>
-                    <a
-                      href="#contact"
+                    <Link
+                      href="/quote"
+                      className="text-gray-400 transition-colors hover:text-white"
+                    >
+                      Free Quote
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/contact"
                       className="text-gray-400 transition-colors hover:text-white"
                     >
                       Contact
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -704,44 +715,44 @@ export default function RootLayout({
                 <h3 className="mb-4 text-lg font-bold">Services</h3>
                 <ul className="space-y-2">
                   <li>
-                    <a
+                    <Link
                       href="#"
                       className="text-gray-400 transition-colors hover:text-white"
                     >
                       Tree Removal
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
+                    <Link
                       href="#"
                       className="text-gray-400 transition-colors hover:text-white"
                     >
                       Tree Pruning
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
+                    <Link
                       href="#"
                       className="text-gray-400 transition-colors hover:text-white"
                     >
                       Stump Grinding
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
+                    <Link
                       href="#"
                       className="text-gray-400 transition-colors hover:text-white"
                     >
                       Emergency Services
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
+                    <Link
                       href="#"
                       className="text-gray-400 transition-colors hover:text-white"
                     >
                       Tree Health Assessment
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -749,9 +760,21 @@ export default function RootLayout({
                 <h3 className="mb-4 text-lg font-bold">Business Hours</h3>
                 <ul className="space-y-2 text-gray-400">
                   <li>Monday - Sunday: 6am - 6pm</li>
-
-                  <li className="pt-2 font-bold text-green-400">
+                  <li className="pt-2 pb-4 font-bold text-green-400">
                     24/7 Emergency Services Available
+                  </li>
+                  <li>
+                    <a href="tel:07809476910">
+                      <button className="w-full bg-red-700 hover:bg-red-700 text-white  py-3 rounded-md transition duration-300  cursor-pointer drop-shadow-md drop-shadow-red-900 border border-black">
+                        <p className="flex items-center justify-center text-xl font-bold">
+                          Emergency?
+                        </p>
+                        <p className="flex items-center justify-center  font-bold">
+                          Call us immediately
+                        </p>
+                        <span className="font-bold text-lg">07809 476 910</span>
+                      </button>
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -761,7 +784,7 @@ export default function RootLayout({
                 © {year} Clean Cut Tree Services. All rights reserved.
               </p>
               <div className="mt-4 flex space-x-4 md:mt-0">
-                <a
+                <Link
                   href="https://www.facebook.com/CleanCutTreeUK"
                   className="text-gray-400 transition-colors hover:text-white"
                 >
@@ -779,47 +802,47 @@ export default function RootLayout({
                   >
                     <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
                   </svg>
-                </a>
-                {/* <a
-                href="#"
-                className="text-gray-400 transition-colors hover:text-white"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="h-6 w-6"
+                </Link>
+                <Link
+                  href="#"
+                  className="text-gray-400 transition-colors hover:text-white"
                 >
-                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
-                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-                  <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
-                </svg>
-              </a>
-              <a
-                href="#"
-                className="text-gray-400 transition-colors hover:text-white"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="h-6 w-6"
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="h-6 w-6"
+                  >
+                    <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                  </svg>
+                </Link>
+                <Link
+                  href="#"
+                  className="text-gray-400 transition-colors hover:text-white"
                 >
-                  <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
-                </svg>
-              </a> */}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="h-6 w-6"
+                  >
+                    <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
+                  </svg>
+                </Link>
               </div>
             </div>
           </div>
