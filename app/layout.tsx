@@ -3,7 +3,6 @@ import './globals.css';
 import Image from 'next/image';
 import Link from 'next/link';
 import { BsFillCheckCircleFill } from 'react-icons/bs';
-import { FaPhone } from 'react-icons/fa';
 
 export const metadata: Metadata = {
   title:
