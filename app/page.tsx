@@ -24,7 +24,10 @@ export default function Home() {
             </div>
           </div>
           <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 ">
-            <div className="flex flex-col bg-[#0e7f31]/5 p-8 rounded-md shadow-md border border-[#0e7f31]/30 hover:border-[#0e7f31] hover:shadow-lg transition duration-300">
+            <Link
+              href={'/services/tree-removal'}
+              className="flex flex-col bg-[#0e7f31]/5 p-8 rounded-md shadow-md border border-[#0e7f31]/30 hover:border-[#0e7f31] transition duration-300 group hover:cursor-pointer hover:shadow-green-800 hover:shadow-sm"
+            >
               <div className="relative ">
                 <FaTree
                   size={64}
@@ -39,15 +42,15 @@ export default function Home() {
                 emergency services for storm-damaged trees.
               </p>
 
-              <Link
-                href="/services/tree-services"
-                className="mt-4 text-[#0e7f31] hover:underline"
-              >
+              <p className="mt-4 group-hover:text-[#0e7f31] text-[#3c5e47]  group-hover:underline">
                 Learn More
-              </Link>
-            </div>
+              </p>
+            </Link>
 
-            <div className="flex flex-col bg-[#0e7f31]/5 p-8 rounded-md shadow-md border border-[#0e7f31]/30 hover:border-[#0e7f31] hover:shadow-lg transition duration-300">
+            <Link
+              href={'/services/tree-pruning'}
+              className="flex flex-col bg-[#0e7f31]/5 p-8 rounded-md shadow-md border border-[#0e7f31]/30 hover:border-[#0e7f31] transition duration-300 group hover:cursor-pointer hover:shadow-green-800 hover:shadow-sm"
+            >
               <div className="relative">
                 <FiScissors
                   size={64}
@@ -62,15 +65,15 @@ export default function Home() {
                 while promoting proper growth patterns.
               </p>
 
-              <Link
-                href="/services/tree-services"
-                className="mt-4 text-[#0e7f31] hover:underline"
-              >
+              <p className="mt-4 group-hover:text-[#0e7f31] text-[#3c5e47] group-hover:underline">
                 Learn More
-              </Link>
-            </div>
+              </p>
+            </Link>
 
-            <div className="flex flex-col bg-[#0e7f31]/5 p-8 rounded-md shadow-md border border-[#0e7f31]/30 hover:border-[#0e7f31] hover:shadow-lg transition duration-300">
+            <Link
+              href={'/services/stump-grinding'}
+              className="flex flex-col bg-[#0e7f31]/5 p-8 rounded-md shadow-md border border-[#0e7f31]/30 hover:border-[#0e7f31] transition duration-300 group hover:cursor-pointer hover:shadow-green-800 hover:shadow-sm"
+            >
               <div className="relative">
                 <GiAxeInStump
                   size={64}
@@ -85,15 +88,15 @@ export default function Home() {
                 and prevent pest infestations.
               </p>
 
-              <Link
-                href="/services/tree-services"
-                className="mt-4 text-[#0e7f31] hover:underline"
-              >
+              <p className="mt-4 group-hover:text-[#0e7f31] text-[#3c5e47] group-hover:underline">
                 Learn More
-              </Link>
-            </div>
+              </p>
+            </Link>
 
-            <div className="flex flex-col bg-[#0e7f31]/5 p-8 rounded-md shadow-md border border-[#0e7f31]/30 hover:border-[#0e7f31] hover:shadow-lg transition duration-300">
+            <Link
+              href={'/services/tree-health-assessment'}
+              className="flex flex-col bg-[#0e7f31]/5 p-8 rounded-md shadow-md border border-[#0e7f31]/30 hover:border-[#0e7f31] transition duration-300 group hover:cursor-pointer hover:shadow-green-800 hover:shadow-sm"
+            >
               <div className="relative">
                 <FaStethoscope
                   size={64}
@@ -110,15 +113,15 @@ export default function Home() {
                 recommendations to preserve your trees.
               </p>
 
-              <Link
-                href="/services/tree-services"
-                className="mt-4 text-[#0e7f31] hover:underline"
-              >
+              <p className="mt-4 group-hover:text-[#0e7f31] text-[#3c5e47] group-hover:underline">
                 Learn More
-              </Link>
-            </div>
+              </p>
+            </Link>
 
-            <div className="flex flex-col bg-[#0e7f31]/5 p-8 rounded-md shadow-md border border-[#0e7f31]/30 hover:border-[#0e7f31] hover:shadow-lg transition duration-300">
+            <Link
+              href={'/services/crown-reduction'}
+              className="flex flex-col bg-[#0e7f31]/5 p-8 rounded-md shadow-md border border-[#0e7f31]/30 hover:border-[#0e7f31] transition duration-300 group hover:cursor-pointer hover:shadow-green-800 hover:shadow-sm"
+            >
               <div className="relative">
                 <FaMinimize
                   size={64}
@@ -133,15 +136,15 @@ export default function Home() {
                 and structural integrity.
               </p>
 
-              <Link
-                href="/services/tree-services"
-                className="mt-4 text-[#0e7f31] hover:underline"
-              >
+              <p className="mt-4 group-hover:text-[#0e7f31] text-[#3c5e47] group-hover:underline">
                 Learn More
-              </Link>
-            </div>
+              </p>
+            </Link>
 
-            <div className="flex flex-col bg-[#0e7f31]/5 p-8 rounded-md shadow-md border border-[#0e7f31]/30 hover:border-[#0e7f31] hover:shadow-lg transition duration-300">
+            <Link
+              href={'/services/emergency-services'}
+              className="flex flex-col bg-[#0e7f31]/5 p-8 rounded-md shadow-md border border-[#0e7f31]/30 hover:border-[#0e7f31] transition duration-300 group hover:cursor-pointer hover:shadow-green-800 hover:shadow-sm"
+            >
               <div className="relative">
                 <FiAlertTriangle
                   size={64}
@@ -156,13 +159,10 @@ export default function Home() {
                 tree-related emergencies.
               </p>
 
-              <Link
-                href="/services/tree-services"
-                className="mt-4 text-[#0e7f31] hover:underline"
-              >
+              <p className="mt-4 group-hover:text-[#0e7f31] text-[#3c5e47] group-hover:underline">
                 Learn More
-              </Link>
-            </div>
+              </p>
+            </Link>
           </div>
         </div>
       </section>
@@ -198,12 +198,12 @@ export default function Home() {
                 and equipment to handle any tree care challenge.
               </p>
               <div className="flex flex-col gap-2 pt-4 min-[400px]:flex-row">
-                <Link href={'/#certifications'}>
+                <Link href={'/#portfolio'}>
                   <button className="bg-[#0e7f31] transition duration-300 border hover:border-green-700 text-white px-10 py-3 rounded-md hover:shadow-lg hover:bg-white hover:text-[#0e7f31]">
-                    Our Certifications
+                    Our Recent Work
                   </button>
                 </Link>
-                <Link href={'/#about-us'}>
+                <Link href={'/about'}>
                   <button className="border border-[#0e7f31] text-[#0e7f31] hover:bg-green-50 px-12 py-3 rounded-md">
                     Meet Our Team
                   </button>
@@ -347,7 +347,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-green-700 py-16 text-white">
+      <section className="bg-green-900 py-16 text-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
@@ -359,10 +359,11 @@ export default function Home() {
                 care needs.
               </p>
             </div>
-            <Link href={'/#contact'}>
-              <button className="bg-white text-[#0e7f31] border hover:border hover:border-gray-100 hover:bg-green-700 hover:text-gray-100 px-12 py-3 rounded-md shadow-md hover:shadow-lg transition duration-300">
-                Request a Callback Today
-              </button>
+            <Link
+              href={'/#contact'}
+              className="bg-green-50 text-[#0e7f31] border hover:border hover:border-green-900 hover:bg-green-800 hover:text-gray-100 px-12 py-4 rounded-md shadow-md hover:shadow-lg transition duration-300 font-bold uppercase group hover:cursor-pointer"
+            >
+              Request a Callback Today
             </Link>
           </div>
         </div>
@@ -452,7 +453,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="m-10 border rounded-md border-zinc-300 bg-green-50 shadow-md">
+            <div className="m-10 border rounded-md border-zinc-300 bg-green-50/30 shadow-md">
               <div className="p-6">
                 <ContactForm />
               </div>

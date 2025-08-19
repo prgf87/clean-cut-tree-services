@@ -520,12 +520,6 @@ export const metadata: Metadata = {
   },
 
   // Mobile/UX Optimization
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-    maximumScale: 1,
-  },
-  themeColor: '#3a7d44', // Brand green (for mobile browsers)
 
   // Business-specific metadata
   category: 'tree services', // Helps search engines classify
@@ -597,14 +591,14 @@ export default function RootLayout({
                   </p>
                 </div>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                  <Link href={'/#contact'}>
-                    <button className="bg-[#0e7f31] transition duration-300 border hover:border-green-700 text-white px-10 py-3 rounded-md hover:shadow-lg hover:bg-white hover:text-[#0e7f31]">
-                      Talk to an Expert
-                    </button>
-                  </Link>
-                  <Link href={'/services'}>
+                  <Link href={'/#services'}>
                     <button className="bg-white transition duration-300 border hover:border-white text-[#0e7f31] px-10 py-3 rounded-md hover:shadow-lg hover:bg-[#0e7f31] hover:text-white">
                       Our Services
+                    </button>
+                  </Link>
+                  <Link href={'/contact'}>
+                    <button className="bg-[#0e7f31] transition duration-300 border hover:border-green-700 text-white px-10 py-3 rounded-md hover:shadow-lg hover:bg-white hover:text-green-800">
+                      Talk to an Expert
                     </button>
                   </Link>
                 </div>
@@ -644,14 +638,16 @@ export default function RootLayout({
           <div className="container mx-auto px-4 md:px-6">
             <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
               <div className="space-y-4">
-                <div className="relative -left-16 top-0 h-16 w-48">
-                  <Image
-                    src="/logo-white.png"
-                    alt="Clean Cut Tree Services"
-                    fill
-                    className="object-contain"
-                  />
-                </div>
+                <Link href="/#">
+                  <div className="relative -left-16 top-0 h-16 w-48">
+                    <Image
+                      src="/logo-white.png"
+                      alt="Clean Cut Tree Services"
+                      fill
+                      className="object-contain cursor-pointer"
+                    />
+                  </div>
+                </Link>
                 <p className="text-gray-400 pr-20">
                   Professional tree care services for residential and commercial
                   properties.
@@ -779,9 +775,12 @@ export default function RootLayout({
               </div>
             </div>
             <div className="mt-8 flex flex-col items-center justify-between border-t border-gray-800 pt-8 md:flex-row">
-              <p className="text-gray-400">
-                © {year} Clean Cut Tree Services. All rights reserved.
-              </p>
+              <a href="#" className="text-gray-400">
+                <span className="hover:underline">
+                  © {year} Clean Cut Tree Services
+                </span>{' '}
+                - All rights reserved.
+              </a>
               <div className="mt-4 flex space-x-4 md:mt-0">
                 <Link
                   href="https://www.facebook.com/CleanCutTreeUK"

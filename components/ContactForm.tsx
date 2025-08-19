@@ -1,7 +1,20 @@
 'use client';
 
+import { sendContactEmail } from '@/utils/actions/nodemailer';
+// import { sendEmail } from '@/utils/emails/aws-ses';
 import { useState } from 'react';
 import { BsFillCheckCircleFill } from 'react-icons/bs';
+
+const data = {
+  to: 'globalwebsystems.official@gmail.com',
+  email: 'globalwebsystems.official@gmail.com',
+  name: 'Test Customer',
+  phone: 'Test Customer',
+  subject: 'Test Email Subject',
+  message: 'This is a test email message.',
+  htmlBody: 'This is a test email html body.',
+  textBody: 'This is a test email in plain text - text body.',
+};
 
 export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -10,12 +23,22 @@ export default function ContactForm() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
+    //extract data from event here
+    const formData = new FormData(e.currentTarget);
+    const data = Object.fromEntries(formData.entries());
+    console.log('Form Data:', data);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    // Call the emailer function to send the email
 
+    // await sendContactEmail(data);
     setIsSubmitting(false);
     setIsSubmitted(true);
+  };
+
+  const handleClick = async () => {
+    console.log('Test Email:');
+    const res = await sendContactEmail(data);
+    console.log('Test email sent successfully!', res);
   };
 
   if (isSubmitted) {
@@ -25,7 +48,7 @@ export default function ContactForm() {
           <BsFillCheckCircleFill className="h-5 w-5 text-[#0e7f31]" />
         </div>
         <h3 className="text-xl font-bold">Thank You!</h3>
-        <p className="mt-2 text-gray-600">
+        <p className="mt-2 mb-4 text-gray-600">
           Your message has been received. We&apos;ll get back to you shortly.
         </p>
         <button
@@ -39,59 +62,67 @@ export default function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
-      <div className="space-y-4">
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-          <div className="space-y-2 flex flex-col">
-            <label htmlFor="first-name">First name</label>
-            <input id="first-name" placeholder="Peter" required />
+    <>
+      <form onSubmit={handleSubmit} className="space-y-6">
+        <div className="space-y-4">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <div className="space-y-2 flex flex-col">
+              <label htmlFor="first-name">First name</label>
+              <input id="first-name" placeholder="Peter" required />
+            </div>
+            <div className="space-y-2 flex flex-col">
+              <label htmlFor="last-name">Last name</label>
+              <input id="last-name" placeholder="Jones" required />
+            </div>
           </div>
           <div className="space-y-2 flex flex-col">
-            <label htmlFor="last-name">Last name</label>
-            <input id="last-name" placeholder="Jones" required />
+            <label htmlFor="email">Email</label>
+            <input
+              id="email"
+              placeholder="peter.jones@example.com"
+              type="email"
+              required
+            />
+          </div>
+          <div className="space-y-2 flex flex-col">
+            <label htmlFor="phone">Phone</label>
+            <input id="phone" placeholder="07123 456 789" type="tel" required />
+          </div>
+          <div className="space-y-2 flex flex-col">
+            <label htmlFor="service">Service Needed</label>
+            <select>
+              <option value="tree-removal">Tree Removal</option>
+              <option value="tree-pruning">Tree Pruning</option>
+              <option value="stump-grinding">Stump Grinding</option>
+              <option value="tree-health">Tree Health Assessment</option>
+              <option value="emergency">Emergency Service</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div className="space-y-2 flex flex-col">
+            <label htmlFor="message">Message</label>
+            <textarea
+              id="message"
+              placeholder="Please provide details about your tree service needs..."
+              rows={4}
+              required
+            />
           </div>
         </div>
-        <div className="space-y-2 flex flex-col">
-          <label htmlFor="email">Email</label>
-          <input
-            id="email"
-            placeholder="peter.jones@example.com"
-            type="email"
-            required
-          />
-        </div>
-        <div className="space-y-2 flex flex-col">
-          <label htmlFor="phone">Phone</label>
-          <input id="phone" placeholder="07123 456 789" type="tel" required />
-        </div>
-        <div className="space-y-2 flex flex-col">
-          <label htmlFor="service">Service Needed</label>
-          <select>
-            <option value="tree-removal">Tree Removal</option>
-            <option value="tree-pruning">Tree Pruning</option>
-            <option value="stump-grinding">Stump Grinding</option>
-            <option value="tree-health">Tree Health Assessment</option>
-            <option value="emergency">Emergency Service</option>
-            <option value="other">Other</option>
-          </select>
-        </div>
-        <div className="space-y-2 flex flex-col">
-          <label htmlFor="message">Message</label>
-          <textarea
-            id="message"
-            placeholder="Please provide details about your tree service needs..."
-            rows={4}
-            required
-          />
-        </div>
-      </div>
+        <button
+          className="w-full bg-[#0e7f31] transition duration-300 border hover:border-green-700 text-white px-10 py-3 rounded-md hover:shadow-lg hover:bg-white hover:text-[#0e7f31]"
+          type="submit"
+          disabled={isSubmitting}
+        >
+          {isSubmitting ? 'Sending...' : 'Send Message'}
+        </button>
+      </form>
       <button
-        className="w-full bg-[#0e7f31] transition duration-300 border hover:border-green-700 text-white px-10 py-3 rounded-md hover:shadow-lg hover:bg-white hover:text-[#0e7f31]"
-        type="submit"
-        disabled={isSubmitting}
+        className="mt-8 w-full bg-[#0e7f31] transition duration-300 border hover:border-green-700 text-white text-lg px-10 py-3 rounded-md hover:shadow-lg hover:bg-white font-bold uppercase hover:text-[#0e7f31]"
+        onClick={handleClick}
       >
-        {isSubmitting ? 'Sending...' : 'Send Message'}
+        TEST ME!
       </button>
-    </form>
+    </>
   );
 }

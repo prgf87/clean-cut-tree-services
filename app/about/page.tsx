@@ -23,9 +23,9 @@ export default function AboutPage() {
                 the latest equipment to ensure your trees are healthy, safe, and
                 beautiful.
               </p>
-              <Link href="/contact">
+              <Link href="/quote">
                 <button className="bg-[#0e7f31] transition duration-300 border hover:border-green-700 text-white px-10 py-3 rounded-md hover:shadow-lg hover:bg-white hover:text-[#0e7f31]">
-                  Get Free Estimate
+                  Get Free Quote
                 </button>
               </Link>
             </div>
@@ -230,16 +230,16 @@ export default function AboutPage() {
             care needs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact">
+            <Link href="/quote">
               <button className="bg-white text-green-600 border hover:border hover:border-gray-100 hover:bg-green-700 hover:text-gray-100 px-12 py-3 rounded-md shadow-md hover:shadow-lg transition duration-300">
-                Get Free Estimate
+                Get Free Quote
               </button>
             </Link>
-            <Link href="tel:07809476910">
+            <a href="tel:07809476910">
               <button className="border border-white text-white hover:bg-white hover:text-green-600 px-12 py-3 rounded-md transition duration-300">
                 Call 07809 476910
               </button>
-            </Link>
+            </a>
           </div>
         </div>
       </section>
