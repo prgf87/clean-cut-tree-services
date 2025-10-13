@@ -509,7 +509,7 @@ export const metadata: Metadata = {
     siteName: 'Clean Cut Tree Services',
     images: [
       {
-        url: 'https://cleancuttree.co.uk/images/img1.jpg', // High-res preview image
+        url: 'https://cleancuttree.co.uk/images/img1.jpg',
         width: 1200,
         height: 630,
         alt: 'Clean Cut Tree team working on tree removal',
@@ -519,10 +519,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
 
-  // Mobile/UX Optimization
-
-  // Business-specific metadata
-  category: 'tree services', // Helps search engines classify
+  category: 'tree services',
   robots: {
     index: true,
     follow: true,
@@ -537,7 +534,6 @@ export const metadata: Metadata = {
     },
   },
 
-  // Local Business SEO (critical for "near me" searches)
   metadataBase: new URL('https://cleancuttree.co.uk'),
   authors: [{ name: 'Clean Cut Tree', url: 'https://cleancuttree.co.uk' }],
   publisher: 'Clean Cut Tree',
@@ -548,20 +544,17 @@ export const metadata: Metadata = {
     telephone: true,
   },
 
-  // Apple/Safari specific
   appleWebApp: {
     capable: true,
     title: 'Clean Cut Tree Services',
     statusBarStyle: 'black-translucent',
   },
 
-  // Icons & Favicons (for browser tabs/bookmarks)
   icons: {
     icon: '/favicon.ico',
     shortcut: '/favicon.ico',
   },
 
-  // Manifest (for PWA)
   manifest: '/site.webmanifest',
 };
 
@@ -666,7 +659,7 @@ export default function RootLayout({
                   </li>
                   <li>
                     <Link
-                      href="/services"
+                      href="/#services"
                       className="text-gray-400 transition-colors hover:text-white"
                     >
                       Services

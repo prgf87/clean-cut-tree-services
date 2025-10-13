@@ -8,6 +8,8 @@ import {
 import { BsFillCheckCircleFill } from 'react-icons/bs';
 
 export default function ContactPage() {
+  const formKey = process.env.CONTACT_FORM_KEY || 'CONTACT_FORM_KEY';
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-green-50 to-white">
       {/* Hero Section */}
@@ -186,6 +188,8 @@ export default function ContactPage() {
                   </select>
                 </div>
 
+                <input type="hidden" name="formKey" value={formKey} />
+
                 <button
                   type="submit"
                   className="w-full bg-[#0e7f31] transition duration-300 border hover:border-green-700 text-white px-10 py-3 rounded-md hover:shadow-lg hover:bg-white hover:text-[#0e7f31]"
@@ -362,10 +366,11 @@ export default function ContactPage() {
           <div className="text-center mt-8">
             <p className="text-gray-600">
               Don&apos;t see your area listed?{' '}
-              <a href="tel:07809476910">
-                <span className="text-green-600 font-medium underline hover:text-green-500 cursor-pointer">
-                  Call us
-                </span>{' '}
+              <a
+                href="tel:07809476910"
+                className="text-green-600 font-medium underline"
+              >
+                Call us
               </a>
               - we may still be able to help!
             </p>

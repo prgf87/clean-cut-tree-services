@@ -1,12 +1,10 @@
 'use client';
 
-import { sendContactEmail } from '@/utils/actions/nodemailer';
-// import { sendEmail } from '@/utils/emails/aws-ses';
+import { sendContactEmail } from '@/utils/emails';
 import { useState } from 'react';
 import { BsFillCheckCircleFill } from 'react-icons/bs';
 
 const data = {
-  to: 'globalwebsystems.official@gmail.com',
   email: 'globalwebsystems.official@gmail.com',
   name: 'Test Customer',
   phone: 'Test Customer',
@@ -20,26 +18,34 @@ export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+  const handleSubmit = async (formData: FormData) => {
     setIsSubmitting(true);
     //extract data from event here
-    const formData = new FormData(e.currentTarget);
-    const data = Object.fromEntries(formData.entries());
-    console.log('Form Data:', data);
+    console.log('Form Submitted!!' + formData);
+    const rawFormData = {
+      name: formData.get('first-name') + ' ' + formData.get('last-name'),
+      email: formData.get('email'),
+      message: formData.get('message'),
+      phone: formData.get('phone'),
+      service: formData.get('service'),
+    };
+    console.log('Form Data:', rawFormData);
 
     // Call the emailer function to send the email
+    const res = await sendContactEmail(rawFormData);
+
+    console.log('Email sent successfully!', res);
 
     // await sendContactEmail(data);
     setIsSubmitting(false);
     setIsSubmitted(true);
   };
 
-  const handleClick = async () => {
-    console.log('Test Email:');
-    const res = await sendContactEmail(data);
-    console.log('Test email sent successfully!', res);
-  };
+  // const handleClick = async (e: any) => {
+  //   console.log('Test Email : ', data.email);
+  //   const res = await sendContactEmail(data);
+  //   console.log('Test email sent successfully!', res);
+  // };
 
   if (isSubmitted) {
     return (
@@ -63,22 +69,22 @@ export default function ContactForm() {
 
   return (
     <>
-      <form onSubmit={handleSubmit} className="space-y-6">
+      <form action={handleSubmit} className="space-y-6">
         <div className="space-y-4">
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             <div className="space-y-2 flex flex-col">
               <label htmlFor="first-name">First name</label>
-              <input id="first-name" placeholder="Peter" required />
+              <input name="first-name" placeholder="Peter" required />
             </div>
             <div className="space-y-2 flex flex-col">
               <label htmlFor="last-name">Last name</label>
-              <input id="last-name" placeholder="Jones" required />
+              <input name="last-name" placeholder="Jones" required />
             </div>
           </div>
           <div className="space-y-2 flex flex-col">
             <label htmlFor="email">Email</label>
             <input
-              id="email"
+              name="email"
               placeholder="peter.jones@example.com"
               type="email"
               required
@@ -86,11 +92,16 @@ export default function ContactForm() {
           </div>
           <div className="space-y-2 flex flex-col">
             <label htmlFor="phone">Phone</label>
-            <input id="phone" placeholder="07123 456 789" type="tel" required />
+            <input
+              name="phone"
+              placeholder="07123 456 789"
+              type="tel"
+              required
+            />
           </div>
           <div className="space-y-2 flex flex-col">
             <label htmlFor="service">Service Needed</label>
-            <select>
+            <select name="service">
               <option value="tree-removal">Tree Removal</option>
               <option value="tree-pruning">Tree Pruning</option>
               <option value="stump-grinding">Stump Grinding</option>
@@ -102,7 +113,7 @@ export default function ContactForm() {
           <div className="space-y-2 flex flex-col">
             <label htmlFor="message">Message</label>
             <textarea
-              id="message"
+              name="message"
               placeholder="Please provide details about your tree service needs..."
               rows={4}
               required
@@ -117,12 +128,12 @@ export default function ContactForm() {
           {isSubmitting ? 'Sending...' : 'Send Message'}
         </button>
       </form>
-      <button
+      {/* <button
         className="mt-8 w-full bg-[#0e7f31] transition duration-300 border hover:border-green-700 text-white text-lg px-10 py-3 rounded-md hover:shadow-lg hover:bg-white font-bold uppercase hover:text-[#0e7f31]"
         onClick={handleClick}
       >
         TEST ME!
-      </button>
+      </button> */}
     </>
   );
 }

@@ -310,8 +310,13 @@ export default function ServicesPage() {
           <div className="text-center mt-8">
             <p className="text-gray-600">
               Don&apos;t see your area listed?{' '}
-              <span className="text-green-600 font-medium">Call us</span> - we
-              may still be able to help!
+              <a
+                href="tel:07809476910"
+                className="text-green-600 font-medium underline"
+              >
+                Call us
+              </a>{' '}
+              - we may still be able to help!
             </p>
           </div>
         </div>
