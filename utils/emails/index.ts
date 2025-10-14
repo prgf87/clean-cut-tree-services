@@ -65,8 +65,8 @@ export async function sendContactEmail(formData: {
     await resend.emails.send({
       from: process.env.TEST_FROM_EMAIL!,
       to: process.env.TEST_TO_INTERNAL!,
-      subject: 'New enquiry received',
-      text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
+      subject: 'New enquiry received - Clean Cut Tree Services Website',
+      text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\n\nService Required: ${service}\n\nMessage:\n${message}`,
     });
 
     return { ok: true };

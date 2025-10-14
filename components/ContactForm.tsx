@@ -4,15 +4,15 @@ import { sendContactEmail } from '@/utils/emails';
 import { useState } from 'react';
 import { BsFillCheckCircleFill } from 'react-icons/bs';
 
-const data = {
-  email: 'globalwebsystems.official@gmail.com',
-  name: 'Test Customer',
-  phone: 'Test Customer',
-  subject: 'Test Email Subject',
-  message: 'This is a test email message.',
-  htmlBody: 'This is a test email html body.',
-  textBody: 'This is a test email in plain text - text body.',
-};
+// const data = {
+//   email: 'globalwebsystems.official@gmail.com',
+//   name: 'Test Customer',
+//   phone: 'Test Customer',
+//   subject: 'Test Email Subject',
+//   message: 'This is a test email message.',
+//   htmlBody: 'This is a test email html body.',
+//   textBody: 'This is a test email in plain text - text body.',
+// };
 
 export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
